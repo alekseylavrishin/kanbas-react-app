@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Details</title>
+</head>
+<body>
+    <table>
+        <thead>
+        </thead>
+        <tbody>
+        <tr valign="top">
+            <td>
+                <ul>
+                    <li><a href="/Kanbas/Profile/index.html">Account</a></li>
+                    <li><a href="/Kanbas/home.html">Dashboard</a> </li>
+                    <li><a href="/Kanbas/home.html">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><a href="/Kanbas/home.html">Home</a></li>
+                    <li><a href="/Kanbas/home.html">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="/Kanbas/Assignments/index.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="/Kanbas/Grades/grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="/Kanbas/Settings/index.html">Settings</a></li>
+                </ul>
+            </td>
+            <td>
+                <a href="index.html">Course Details</a> &nbsp;
+                <a href="#">Sections</a> &nbsp;
+                <a href="navigation.html">Navigation</a> &nbsp;
+                <a href="#">Apps</a> &nbsp;
+                <a href="#">Feature Options</a> &nbsp;
+                <a href="#">Integrations</a>
+                <hr>
+                <h2>Course Details</h2>
+                Image: <button type="button">Choose Image</button>
+                <br><br>
+                Name: CS5610 17367 Web Development SEC 02 Fall 2023 [VTL-2-OL]
+                <br><br>
+                Course Code:
+                <br><br>
+                Blueprint Course: No
+                <br><br>
+                Course Template: <a href="#">Enable course as a Course Template</a>
+                <br><br>
+                <label for="timezone-dropdown">Time Zone:</label>
+                <select id="timezone-dropdown">
+                    <option value="EASTERNTIME">Eastern Time (US & Canada) (-05:00/04:00)</option>
+                </select>
+                <br><br>
+                SSID:
+                Subaccount: <a href="#">CS Graduate</a>
+                <br><br>
+                Term: 202410_1 Fall 2023 Semester Full Time
+                <br><br>
+                <label for="participation-dropdown">Participation</label>
+                <select id="participation-dropdown">
+                    <option value="TERM">Term</option>
+                </select>
+                <br>
+                Course Participation is limited to term start and end dates.
+                <br><br>
+                <h4>Start</h4>
+                <label for="start-date"></label>
+                <input type="date" id="start-date">
+
+                <h4>End</h4>
+                <label for="end-date"></label>
+                <input type="date" id="end-date">
+
+                <br><br>
+                <input type="checkbox" value="Restrict Students from viewing course before term start date"
+                name="studentRestrict-checkbox" id="restrictBeforeStart-checkbox">
+                <label for="restrictBeforeStart-checkbox">Restrict Students from viewing course before term start date</label>
+                <br>
+                <input type="checkbox" value="Restrict Students from viewing course after term end date"
+                name="studentRestrict-checkbox" id="restrictAfterEnd-checkbox">
+                <label for="restrictAfterEnd-checkbox">Restrict Students from viewing course after term end date</label>
+
+                <br><br>
+                <label for="dueTime-dropdown">Default due time:</label>
+                <select id="dueTime-dropdown">
+                    <option value="DEFAULT">Account Default(11:59pm)</option>
+                </select>
+                <br>
+                <p>This influences the user interface for setting due dates.
+                    It does not change the time due for any existing assignments
+                </p>
+                <label for="language-dropdown">Language:</label>
+                <select id="language-dropdown">
+                    <option value="NOT-SET">Not Set (user-configurable, defaults to English)</option>
+                </select>
+                <p>This will override any user/system language preferences.
+                    This is only recommended for foreign language courses.
+                </p>
+
+                File Storage: 10000 megabytes
+                <br><br>
+                Large Course:
+                <input type="checkbox" value="Launch Speedgrader" name="launchSpeedgrader-checkbox" id="speedgrader-checkbox">
+                <label for="speedgrader-checkbox">Launch SpeedGrader Filtered by Student Group</label>
+                <br><br>
+                Grading Scheme:
+                <input type="checkbox" value="Enable Course Grading Scheme" name="gradingScheme-checkbox" id="gradingScheme-checkbox">
+                <label for="gradingScheme-checkbox">Enable Course Grading Scheme</label>
+                <br><br>
+                <label for="license-dropdown">License:</label>
+                <select id="license-dropdown">
+                    <option value="PRIVATE">Private(Copyrighted)</option>
+                    <option value="PUBLIC">Public</option>
+                </select>
+                <a href="#">Info</a>
+                <br><br>
+                File Copyright:
+                <input type="checkbox" value="provideCopyright" name="provideCopyright-checkbox" id="copyright-checkbox">
+                <label for="copyright-checkbox">Copyright and license information must be provided for files before
+                    they are published.
+                </label>
+
+                <br><br>
+                <label for="visibility-dropdown">Visibility: &ensp; If you need to make your course public please contact your administrator/support.</label>
+                <br>
+                <select id="visibility-dropdown">
+                    <option value="Course">Course</option>
+                </select>
+                <a href="#">Info</a>
+
+                <br><br>
+                Mastery Paths:
+                <input type="checkbox" value="masteryPaths" name="masteryPaths-checkbox" id="masteryPaths-checkbox">
+                <label for="masteryPaths-checkbox">Enable individual learning paths for students based on assessment.
+                </label>
+
+                <br><br>
+                <form id="description-textarea">
+                    <label style="">Description:</label>
+                    <textarea cols="60" rows="1" style=""></textarea>
+                </form>
+                <a href="#">More options</a>
+                <hr>
+                <button type="button">Update Course Details</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
