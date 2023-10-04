@@ -3,117 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" href="../styles.css" type="text/css">
+    <!--<link rel="stylesheet" href="../styles.css" type="text/css">-->
+    <!--<link href="/Vendors/Bootstrap/js/bootstrap.bundle.min.js" rel="stylesheet">
+    <link href="/Vendors/Bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="/Vendors/Fontawesome/css/all.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="wd-flex-row-container">
-  <div>Kanbas Navigation
-    <li><a href="/Kanbas/Profile/index.html">Account</a></li>
-    <li><a href="/Kanbas/home.html">Dashboard</a> </li>
-    <li><a href="/Kanbas/home.html">Courses</a></li>
-    <li><a href="#">Calendar</a></li>
-    <li><a href="#">Inbox</a></li>
-    <li><a href="#">History</a></li>
-    <li><a href="#">Studio</a></li>
-    <li><a href="#">Commons</a></li>
-    <li><a href="#">Help</a></li>
+<div class="wd-column wd-nav-div">
+  <ul class="wd-sidebar-ul fa-ul">
+    <li class="wd-sidebar-li">
+        <i class="fab fa-neos fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Courses</div>
+    </li>
+
+    <li class="wd-sidebar-li">
+      <a class="wd-sidebar-a" href="/Kanbas/Profile/index.html">
+        <i class="fas fa-user-circle fa-stack-2x"></i><div class="wd-sidebar-section-name">Account</div>
+      </a>
+    </li>
+
+    <li class="wd-sidebar-li">
+      <a class="wd-sidebar-a" href="/Kanbas/home.html">
+        <i class="fas fa-tachometer-alt fa-stack-2x wd-sidebar-icon-color wd-sidebar-img"></i><div class="wd-sidebar-section-name">Dashboard</div>
+      </a>
+    </li>
+
+    <li class="wd-sidebar-li wd-sidebar-li-current">
+      <a class="wd-sidebar-a wd-sidebar-a-current" href="/Kanbas/home.html">
+        <i class="fas fa-book fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Courses</div>
+      </a>
+    </li>
+
+    <li class="wd-sidebar-li">
+      <a class="wd-sidebar-a" href="#">
+        <i class="fas fa-calendar fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Calendar</div>
+      </a>
+    </li>
+
+    <li class="wd-sidebar-li">
+      <a class="wd-sidebar-a" href="#">
+        <i class="fas fa-inbox fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Inbox</div>
+      </a>
+    </li>
+
+    <li class="wd-sidebar-li">
+      <a class="wd-sidebar-a" href="#">
+        <i class="fas fa-clock fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">History</div>
+      </a>
+    </li>
+
+    <li class="wd-sidebar-li">
+      <a class="wd-sidebar-a" href="#">
+        <i class="fas fa-tv fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Studio</div>
+      </a>
+    </li>
+
+    <li class="wd-sidebar-li">
+      <a class="wd-sidebar-a" href="#">
+        <i class="fas fa-arrow-circle-right fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Commons</div>
+      </a>
+    </li>
+
+    <li class="wd-sidebar-li">
+      <a class="wd-sidebar-a" href="#">
+        <i class="fas fa-question-circle fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Help</div>
+      </a>
+    </li>
+
+
+  </ul>
+</div>
+
+  <div class="wd-column wd-courses-bar">
+    <ul class="wd-courses-ul">
+      <li class="wd-courses-li wd-courses-li-active"><a class="wd-courses-a wd-courses-a-active" href="/Kanbas/home.html">Home</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="/Kanbas/home.html">Modules</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Piazza</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Zoom Meetings</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="/Kanbas/Assignments/index.html">Assignments</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Quizzes</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="/Kanbas/Grades/grades.html">Grades</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">People</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Panopto Video</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Discussions</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Announcements</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Pages</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Files</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Rubrics</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Outcomes</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Collaborations</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="#">Syllabus</a></li>
+      <li class="wd-courses-li"><a class="wd-courses-a" href="/Kanbas/Settings/index.html">Settings</a></li>
+    </ul>
   </div>
-  <div>Course Navigation
-    <li><a href="/Kanbas/home.html">Home</a></li>
-    <li><a href="/Kanbas/home.html">Modules</a></li>
-    <li><a href="#">Piazza</a></li>
-    <li><a href="#">Zoom Meetings</a></li>
-    <li><a href="/Kanbas/Assignments/index.html">Assignments</a></li>
-    <li><a href="#">Quizzes</a></li>
-    <li><a href="/Kanbas/Grades/grades.html">Grades</a></li>
-    <li><a href="#">People</a></li>
-    <li><a href="#">Panopto Video</a></li>
-    <li><a href="#">Discussions</a></li>
-    <li><a href="#">Announcements</a></li>
-    <li><a href="#">Pages</a></li>
-    <li><a href="#">Files</a></li>
-    <li><a href="#">Rubrics</a></li>
-    <li><a href="#">Outcomes</a></li>
-    <li><a href="#">Collaborations</a></li>
-    <li><a href="#">Syllabus</a></li>
-    <li><a href="/Kanbas/Settings/index.html">Settings</a></li>
-  </div>
-  <div class="wd-flex-grow">Modules
+
+    <div class="wd-column wd-modules-column">
     <br/>
-    <button type="button">Collapse All</button>
-    <button type="button">View Progress</button>
-    <label for="publish-all-drop-down"></label>
+    <button type="button" class="btn btn-light btn-outline-dark">Collapse All</button>
+    <button type="button" class="btn btn-light btn-outline-dark">View Progress</button>
+
+    <!--<label for="publish-all-drop-down"></label>
     <select id="publish-all-drop-down">
       <option value="PUBLISH-ALL" selected>Publish All</option>
       <option value="UNPUBLISH-ALL">Unpublish All</option>
-    </select>
-    <button type="button">Module</button>
-    <ul>
-      <li>Week 0 - INTRO</li>
-      <ul>
-        <li>LEARNING OBJECTIVES</li>
-        <ul>
-          <li>Introduction to the course</li>
-          <li>Learn what is Web Development</li>
-          <li>Creating a development environment</li>
-          <li>Creating a web application</li>
-          <li>Getting started with the 1st assignment</li>
-        </ul>
-        <li>READING</li>
-        <ul>
-          <li>Full Stack Developer - Chapter 1 - Introduction</li>
-          <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-        </ul>
-        <li>SLIDES</li>
-        <ul>
-          <li><a href="https://www.youtube.com/watch?v=N4im2YCnhWQ&feature=youtu.be">
-            Introduction to Web Development Links to an external site.</a></li>
-          <li><a href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit#slide=id.g10f06da46b0_0_11">
-            Creating an HTTP server with Node.js Links to an external site.</a></li>
-          <li><a href="https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p">
-            Creating a React Application Links to an external site.</a></li>
-        </ul>
-      </ul>
-      <li>Week 1 - HTML</li>
-      <ul>
-        <li>LEARNING OBJECTIVES</li>
-        <ul>
-          <li>Learn how to create user interfaces with HTML</li>
-          <li>Keep working on Assignment 1</li>
-          <li>Deploy the assignment to Netlify</li>
-        </ul>
-        <li>READING</li>
-        <ul>
-          <li>Full Stack Developer - Chapter 1 - Introduction</li>
-          <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-        </ul>
-      </ul>
-    </ul>
-  </div>
-  <div>status
-    <h2>Course Status</h2>
-    <button type="button">Unpublish</button>
-    <button type="button">Published</button>
-    <ul>
-      <li><a href="#">Import Existing Content</a></li>
-      <li><a href="#">Import From Commons</a></li>
-      <li><a href="#">Choose Home Page</a></li>
-      <li><a href="#">View Course Stream</a></li>
-      <li><a href="#">New Announcement</a></li>
-      <li><a href="#">New Analytics</a></li>
-      <li><a href="#">View Course Notifications</a></li>
-    </ul>
+    </select>-->
 
-    <h2>Coming Up</h2>
-    <a href="#">View Calendar</a>
-    <ul>
-      <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-      <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-      <li><a href="#">CS5610 06 FA23 Lecture Sep 11 at 7pm</a></li>
-    </ul>
+    <div class="btn-group">
+      <button type="button" id="publish-all-drop-down" class="btn btn-light btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Action
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="publish-all-drop-down">
+        <li><a class="dropdown-item active" aria-current="true" href="#">Publish All</a></li>
+        <li><a class="dropdown-item" href="#">Unpublish All</a></li>
+      </ul>
+    </div>
+
+    <button type="button" class="btn wd-modules-module-btn btn-danger btn-outline-dark"><i class="fas fa-plus"></i>&nbsp;Module</button>
+    <hr>
+
+    <ul class="list-group">
+      <li class="list-group-item bg-secondary bg-opacity-25 wd-modules-font">Week 0 - INTRO</li>
+      <ul class="list-group">
+        <li class="list-group-item wd-modules-font">LEARNING OBJECTIVES</li>
+        <ul class="list-group">
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Introduction to the course</li>
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Learn what is Web Development</li>
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Creating a development environment</li>
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Creating a web application</li>
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Getting started with the 1st assignment</li>
+        </ul>
+        <ul class="list-group">
+          <li class="list-group-item wd-modules-font">READING</li>
+        <ul class="list-group">
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Full Stack Developer - Chapter 1 - Introduction</li>
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
+        </ul>
+        <li class="list-group-item wd-modules-font">SLIDES</li>
+        <ul class="list-group">
+          <li class="list-group-item wd-modules-font">
+            <i class="fas fa-link"></i><a class="wd-modules-a" href="https://www.youtube.com/watch?v=N4im2YCnhWQ&feature=youtu.be">
+            Introduction to Web Development
+            <i class="fas fa-external-link-alt"></i>
+          </a></li>
+          <li class="list-group-item wd-modules-font">
+            <i class="fas fa-link"></i><a class="wd-modules-a" href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit#slide=id.g10f06da46b0_0_11">
+            Creating an HTTP server with Node.js
+            <i class="fas fa-external-link-alt"></i>
+          </a></li>
+          <li class="list-group-item wd-modules-font">
+            <i class="fas fa-link"></i><a class="wd-modules-a" href="https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p">
+            Creating a React Application
+            <i class="fas fa-external-link-alt"></i></a>
+          </li>
+        </ul>
+      </ul>
+      </ul>
+      </ul>
+    <br>
+    <ul class="list-group">
+      <li class="list-group-item bg-secondary bg-opacity-25 wd-modules-font">Week 1 - HTML</li>
+        <li class="list-group-item wd-modules-font">LEARNING OBJECTIVES</li>
+        <ul class="list-group">
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Learn how to create user interfaces with HTML</li>
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Keep working on Assignment 1</li>
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Deploy the assignment to Netlify</li>
+        </ul>
+        <li class="list-group-item wd-modules-font">READING</li>
+        <ul class="list-group">
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Full Stack Developer - Chapter 1 - Introduction</li>
+          <li class="list-group-item wd-modules-font">&nbsp;&nbsp;Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
+        </ul>
+      </ul>
   </div>
-</div>
+  <div class="wd-column wd-status-column" style="padding-left: 10px;">
+    <br>
+    <h5>Course Status</h5>
+    <button type="button" class="btn btn-light btn-outline-dark"><i class="fas fa-ban"></i>&nbsp;Unpublish&nbsp;</button>
+    <button type="button" class="btn btn-success"><i class="far fa-check-circle"></i>&nbsp;Published&nbsp;</button>
+
+    <div class="list-group">
+      <a href="#" class="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
+        <i class="fas fa-file-import"></i>
+        Import Existing Content</a>
+      <a href="#" class="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
+        <i class="fas fa-arrow-alt-circle-right"></i>
+        Import From Commons</a>
+      <a href="#" class="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
+        <i class="fas fa-bullseye"></i>
+        Choose Home Page</a>
+      <a href="#" class="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
+        <i class="fas fa-chart-bar"></i>
+        View Course Stream</a>
+      <a href="#" class="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
+        <i class="fas fa-bullhorn"></i>
+        New Announcement</a>
+      <a href="#" class="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
+        <i class="fas fa-chart-bar"></i>
+        New Analytics</a>
+      <a href="#" class="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
+        <i class="fas fa-bell"></i>
+        View Course Notifications</a>
+    </div>
+
+    <div>
+    <h5 class="wd-status-h5">Coming Up</h5>
+    <a class="wd-status-view-calendar" href="#">
+      <i class="fas fa-calendar"></i>
+      View Calendar</a>
+      <hr>
+    <ul class="wd-status-ul">
+      <li class="wd-status-li"><a href="#" class="wd-status-a2"><i class="fas fa-calendar"></i>&nbsp;Lecture</a>
+        <p class="wd-status-p">CS4550.12631.202410 <br>Sep 7 at 11:45am</p></li>
+      <li class="wd-status-li"><a href="#" class="wd-status-a2"><i class="fas fa-calendar"></i>&nbsp;Lecture</a>
+        <p class="wd-status-p">CS4550.12631.202410 <br>Sep 11 at 11:45am</p></li>
+      <li class="wd-status-li"><a href="#" class="wd-status-a2"><i class="fas fa-calendar"></i>&nbsp;CS5610 06 FA23 Lecture</a>
+        <p class="wd-status-p">Sep 11 at 7pm</p></li>
+    </ul>
+    </div>
+
+
+  </div>
+
+
 
 </body>
 </html>
