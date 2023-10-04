@@ -17,6 +17,7 @@ body, html {
     align-content: center;
     background-color: #1c1c1c;
     text-align: center;
+    margin-right: 20px;
 }
 .wd-nav-box{
     height: 100px;
@@ -55,6 +56,12 @@ body, html {
 .wd-sidebar-a-current{
     color: #bf0f0f;
 }
+.wd-sidebar-a-current-profile {
+    color: #bf0f0f;
+}
+.wd-sidebar-i-current-profile {
+    color: grey;
+}
 .wd-sidebar-section-name {
     padding-top: 28px;
 }
@@ -71,7 +78,7 @@ body, html {
 .wd-courses-bar {
     height: 100%;
     align-content: start;
-    width: 150px;
+    width: 190px;
     padding-top: 50px;
     margin-right: 10px;
     margin-left: 10px;
@@ -85,14 +92,12 @@ body, html {
 
 }
 .wd-courses-li {
-    padding: 5px;
+    padding: 5px 5px 10px;
 }
 .wd-courses-li-active {
     border-left: 2px solid #1c1c1c;
     list-style-position: outside;
     color: #1c1c1c;
-
-
 }
 .wd-courses-a{
     font-size: 16px;
@@ -186,4 +191,48 @@ body, html {
 .wd-status-a2:hover {
     color: #bf0f0f;
     text-decoration: underline;
+}
+/*----------------------------*/
+/*----------Profile-----------*/
+.wd-profile-column {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 60%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.wd-profile-grey{
+    color: #575755;
+}
+.wd-profile-link {
+    color: #bf0f0f;
+    text-decoration: none;
+}
+.wd-profile-link:hover {
+    color: #bf0f0f;
+    text-decoration: underline;
+}
+/*----------------------------*/
+/*----------Edit Profile-----------*/
+.wd-edit-dropdown {
+    min-width: 150px;
+    max-width: 225px;
+
+}
+.wd-edit-button {
+    margin-left: 5px;
+}
+.wd-edit-link {
+    max-width:186px;
+    display: inline;
+
+}
+.wd-edit-link-column {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 5px;
+}
+.wd-edit-link-img {
+    padding-left: 5px;
+    padding-right: 0;
 }
