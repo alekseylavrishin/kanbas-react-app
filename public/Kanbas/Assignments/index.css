@@ -258,3 +258,12 @@ body, html {
     color: black;
     text-decoration: underline;
 }
+.wd-edit-assignment-span {
+    margin-right: 10px;
+    font-weight: 600;
+}
+.wd-edit-assignment-div {
+    /*
+    height: 68px;
+    */
+}
