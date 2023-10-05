@@ -250,3 +250,11 @@ body, html {
 .wd-assignment-span {
     font-size: 12px;
 }
+.wd-assignment-a {
+    color: black;
+    text-decoration: none;
+}
+.wd-assignment-a:hover {
+    color: black;
+    text-decoration: underline;
+}
