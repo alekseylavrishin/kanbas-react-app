@@ -75,10 +75,10 @@ body, html {
 .wd-courses-bar {
     height: 100%;
     align-content: start;
-    width: 190px;
-    padding-top: 50px;
+    /*width: 190px;*/
+    padding-top: 20px;
     margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 5px;
 
 }
 .wd-courses-ul{
@@ -226,4 +226,27 @@ body, html {
 .wd-bars-style {
     float: left;
     margin-right: 20px;
+}
+
+/*----------------------------*/
+/*----------Assignment-----------*/
+.wd-assignment-header {
+
+}
+.wd-assignment-button {
+    margin-left: 5px;
+}
+.wd-assignment-li {
+    height: 65px;
+
+}
+.wd-assignment-li-center-v{
+    padding: 10px;
+    z-index: 1;
+}
+.wd-assignment-li-main {
+    padding-left: 5px;
+}
+.wd-assignment-span {
+    font-size: 12px;
 }
