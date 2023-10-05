@@ -21,6 +21,7 @@ body, html {
     background-color: #1c1c1c;
     text-align: center;
     margin-right: 20px;
+    position: fixed;
 }
 .wd-nav-box{
     height: 100px;
@@ -78,7 +79,7 @@ body, html {
     /*width: 190px;*/
     padding-top: 20px;
     margin-right: 10px;
-    margin-left: 5px;
+    margin-left: 90px;
 
 }
 .wd-courses-ul{
@@ -266,4 +267,20 @@ body, html {
     /*
     height: 68px;
     */
+}
+.wd-edit-border {
+    outline: 1px solid #ced4da;
+    padding: 15px;
+
+}
+.wd-edit-checkbox {
+    margin-bottom: 10px;
+}
+.wd-edit-label-title{
+    margin-right: 10px;
+}
+.wd-edit-add-button {
+    display: block;
+    width: 100%;
+    margin-right: 5px;
 }

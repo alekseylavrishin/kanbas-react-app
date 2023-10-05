@@ -123,6 +123,8 @@
             <hr>
         </div>
     </div>
+
+    <form>
     <div class="row">
         <div class="col-12 text-wrap">
             <label for="assignment-name" class="form-label">Assignment Name</label>
@@ -133,126 +135,206 @@
         </div>
     </div>
     <div class="row">
-
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-                <label for="points-input" class="col-form-label">Points</label>
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="points-input" class="col-form-label float-end wd-edit-label-title">Points</label>
             </div>
         <div class="col-6 float-end wd-edit-assignment-div">
-            <input type="number" class="form-control" id="points-input" value="100" autocomplete="off">
+            <input type="number" class="form-control" id="points-input" min="0" max="100" value="100" autocomplete="off">
         </div>
-
-
     </div>
 </div>
 
-
-
-    <table width="100%">
-        <thead>
-        </thead>
-        <tbody>
-        <tr valign="top">
-            <td>
-                <label for="assignmentName">Assignment Name</label><br/>
-                <input id="assignmentName" value="A1 - ENV + HTML">
-
-                <form id="textarea"></form>
-                <label for="textarea"></label>
-                <br>
-                <textarea rows="2" cols="25">This is the assignment description</textarea>
-
-                <br><br>
-                <label for="assignmentPoints">Points</label><br>
-                <input id="assignmentPoints" type="number" value="100" min="0" max="100">
-
-                <br><br>
-                <label for="assignmentGroup-dropdown">Assignment Group</label>
-                <br>
-                <select id="assignmentGroup-dropdown">
+    <div class="row">
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="assignmentGroup-dropdown" class="col-form-label float-end wd-edit-label-title">Assignment Group</label>
+            </div>
+            <div class="col-6 float-end wd-edit-assignment-div">
+                <select id="assignmentGroup-dropdown" class="form-select">
                     <option value="ASSIGNMENTS" selected>ASSIGNMENTS</option>
                     <option value="QUIZZES">QUIZZES</option>
                     <option value="EXAMS">EXAMS</option>
                     <option value="PROJECT">PROJECT</option>
                 </select>
+            </div>
+        </div>
+    </div>
 
-                <br><br>
-                <label for="displayGradeAs-dropdown">Display Grade As</label>
-                <br>
-                <select id="displayGradeAs-dropdown">
-                    <option value="PERCENTAGE" selected>Percentage</option>
+    <div class="row">
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="displayGradeAs-dropdown" class="col-form-label float-end wd-edit-label-title">Display Grade as</label>
+            </div>
+            <div class="col-6 float-end wd-edit-assignment-div">
+                <select id="displayGradeAs-dropdown" class="form-select">
+                    <option value="PERCENTAGE" selected>PERCENTAGE</option>
                 </select>
-            </td>
-            <td>
-                <br>
-                <label for="submissionType-dropdown">Submission Type</label>
-                <br>
-                <select id="submissionType-dropdown">
-                    <option value="ONLINE">Online</option>
-                </select>
+            </div>
+        </div>
+    </div>
 
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-3"></div>
+        <div class="col-6 float-end wd-edit-assignment-div">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="doNotCount" value="DO-NOT-COUNT"/>
+                <label class="form-check-label" for="doNotCount">Do not count this assignment towards the final grade</label>
+            </div>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="submissionType-dropdown" class="col-form-label float-end wd-edit-label-title">Submission Type</label>
+            </div>
+            <div class="col-6 float-end wd-edit-assignment-div wd-edit-border">
+                <div class="input-group mb-3">
+                    <select id="submissionType-dropdown" class="form-select">
+                        <option value="ONLINE" selected>Online</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="float-start">
+                        <span>Online Entry Options</span><br>
+
+                        <input class="form-check-input " type="checkbox" id="check-textEntry" name="onlineEntry-checkbox" value="TEXT-ENTRY"/>
+                        <label class="form-check-label wd-edit-checkbox" for="check-textEntry">Text Entry</label>
+                        <br>
+                        <input class="form-check-input" type="checkbox" id="check-webURL" name="webURL-checkbox" value="WEB-URL"/>
+                        <label class="form-check-label wd-edit-checkbox" for="check-webURL">Web URL</label>
+                        <br>
+                        <input class="form-check-input" type="checkbox" id="check-mediaREC" name="mediaREC-checkbox" value="MEDIA-REC"/>
+                        <label class="form-check-label wd-edit-checkbox" for="check-mediaREC">Media Recordings</label>
+                        <br>
+                        <input class="form-check-input" type="checkbox" id="check-student" name="studentAnnotation-checkbox" value="STUDENT-ANNOTATION"/>
+                        <label class="form-check-label wd-edit-checkbox" for="check-student">Student Annotation</label>
+                        <br>
+                        <input class="form-check-input" type="checkbox" id="check-fileUpl" name="fileUpload-checkbox" value="FILE-UPLOAD"/>
+                        <label class="form-check-label wd-edit-checkbox" for="check-fileUpl">File Uploads</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="submissionAttempts-dropdown" class="col-form-label float-end wd-edit-label-title">Submission Attempts</label>
+            </div>
+            <div class="col-6 float-end wd-edit-assignment-div wd-edit-border">
+                <h5>Allowed Attempts</h5>
+                <div class="input-group mb-3">
+                    <select id="submissionAttempts-dropdown" class="form-select">
+                        <option value="UNLIMITED" selected>Unlimited</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="plagiarism-dropdown" class="col-form-label float-end wd-edit-label-title">Plagiarism Review</label>
+            </div>
+            <div class="col-6 float-end wd-edit-assignment-div wd-edit-border">
+                <div class="input-group mb-3">
+                    <select id="plagiarism-dropdown" class="form-select">
+                        <option value="NONE" selected>None</option>
+                    </select>
+                </div>
+                <hr>
+                <h6>Show report to students</h6>
+                <div class="input-group mb-3">
+                    <select id="showReport-dropdown" class="form-select disabled">
+                        <option value="NONE" disabled>None</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="check-groupAssignment" class="col-form-label float-end wd-edit-label-title">Group Assignment</label>
+            </div>
+            <div class="col-6 float-end wd-edit-assignment-div wd-edit-border">
+                <div class="input-group mb-3">
+                    <br>
+                    <input class="form-check-input" type="checkbox" id="check-groupAssignment" name="groupAssignment-checkbox" value="GROUP-ASSIGNMENT"/>
+                    <label class="form-check-label wd-edit-checkbox" for="check-groupAssignment">&nbsp;This is a Group Assignment</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="check-peerReview" class="col-form-label float-end wd-edit-label-title">Group Assignment</label>
+            </div>
+            <div class="col-6 float-end wd-edit-assignment-div wd-edit-border">
+                <div class="input-group mb-3">
+                    <br>
+                    <input class="form-check-input" type="checkbox" id="check-peerReview" name="peerReview-checkbox" value="PEER-REVIEW"/>
+                    <label class="form-check-label wd-edit-checkbox" for="check-peerReview">&nbsp;Require Peer Reviews</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row g-2">
+            <div class="col-3">
+                <label for="assignTo-dropdown" class="col-form-label float-end wd-edit-label-title">Assign</label>
+            </div>
+            <div class="col-6 float-end wd-edit-assignment-div wd-edit-border">
+                <h5>Assign To</h5>
+                <div class="input-group mb-3">
+                    <select id="assignTo-dropdown" class="form-select">
+                        <option value="EVERYONE" selected>Everyone</option>
+                    </select>
+                </div>
+                <label for="due-date">Due</label>
+                <input class="form-control" type="date" id="due-date" value="2023-01-01">
                 <br><br>
-                <label>Online Entry Options</label>
-                <br>
-                <input type="checkbox" value="TEXT-ENTRY" name="onlineEntry-checkbox" id="check-textEntry">
-                <label for="check-textEntry">Text Entry</label><br>
-                <input type="checkbox" value="WEB-URL" name="webURL-checkbox" id="check-webURL">
-                <label for="check-webURL">Web URL</label><br>
-                <input type="checkbox" value="MEDIA-REC" name="mediaREC-checkbox" id="check-mediaREC">
-                <label for="check-mediaREC">Media Recordings</label><br>
-                <input type="checkbox" value="STUDENT-ANNOTATION" name="studentAnnotation-checkbox" id="check-student">
-                <label for="check-student">Student Annotation</label><br>
-                <input type="checkbox" value="FILE-UPLOAD" name="fileUpload-checkbox" id="check-fileUpl">
-                <label for="check-fileUpl">File Upload</label><br>
-
-                <br>
-                <label for="submissionAttempts-dropdown">Submission Attempts</label>
-                <br>
-                <select id="submissionAttempts-dropdown">
-                    <option value="UNLIMITED" selected>Unlimited</option>
-                </select>
-
+                <label for="availableFrom-date">Available From</label>
+                <input class="form-control" type="date" id="availableFrom-date" value="2023-01-01">
                 <br><br>
-                <label for="plagiarism-dropdown">Plagiarism Review</label>
-                <br>
-                <select id="plagiarism-dropdown">
-                    <option value="NONE">None</option>
-                </select>
-                <br><br>
+                <label for="until-date">Until</label>
+                <input class="form-control" type="date" id="until-date" value="2023-01-01">
+                <div col-6>
+                    <button type="button" class="btn btn-sm btn-light btn-outline-dark wd-edit-add-button "><i class="fas fa-plus"></i>Add</button>
+                </div>
 
-                <label>Group Assignment</label>
-                <br>
-                <input type="checkbox" value="groupAssignment" name="groupAssignment-checkbox" id="check-groupAssignment">
-                <label for="check-groupAssignment">This is a group assignment</label><br>
+            </div>
+        </div>
+    </div>
 
-                <br>
-                <label>Peer Reviews</label><br>
-                <input type="checkbox" value="peerReview" name="peerReview-checkbox" id="check-peerReview">
-                <label for="check-peerReview">Require Peer Reviews</label><br>
+        <div class="row">
+            <div class="col-12 text-wrap">
+                <hr>
+                <div class="float-start col-6">
+                    <input class="form-check-input " type="checkbox" id="check-notify" name="notify-checkbox" value="TEXT-ENTRY"/>
+                    <label class="form-check-label wd-edit-checkbox" for="check-notify">Notify users that this content has changed</label>
+                </div>
+                <div class="float-start col-3">
+                    <a href="index.html"><button type="submit" class="btn btn-sm btn-danger wd-assignment-button float-end">Save</button></a>
+                    <a href="index.html"><button type="button" class="btn btn-sm btn-light btn-outline-dark wd-assignment-button float-end">Cancel</button></a>
+                </div>
 
-                <br>
-                <label for="assignTo">Assign</label><br>
-                Assign to<br>
-                <input id="assignTo" value="Everyone">
-                <br><br>
+            </div>
+        </div>
 
-                <label for="due-date">Due</label><br>
-                <input type="date" id="due-date" value="2023-01-01">
-                <br><br>
-                <label for="availableFrom-date">Available From</label><br>
-                <input type="date" id="availableFrom-date" value="2023-01-01">
-                <br><br>
-                <label for="until-date">Until</label><br>
-                <input type="date" id="until-date" value="2023-01-01">
-                <br><br>
 
-                <button type="button">Cancel</button>
-                <button type="button">Save</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
 
+    </form>
+</div>
 
 </body>
 </html>
