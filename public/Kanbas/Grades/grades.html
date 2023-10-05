@@ -3,144 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <title>Grades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="/Vendors/Fontawesome/css/all.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
 
-<table>
-    <thead>
-    </thead>
-    <tbody>
-    <tr valign="top">
-        <td>
-            <ul>
-                <li><a href="/Kanbas/Profile/index.html">Account</a></li>
-                <li><a href="/Kanbas/home.html">Dashboard</a> </li>
-                <li><a href="/Kanbas/home.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
+
+<div class="wd-column wd-nav-div float-start">
+    <ul class="wd-sidebar-ul fa-ul">
+        <li class="wd-sidebar-li">
+            <i class="fab fa-neos fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Courses</div>
+        </li>
+
+        <li class="wd-sidebar-li">
+            <a class="wd-sidebar-a" href="/Kanbas/Profile/index.html">
+                <i class="fas fa-user-circle fa-stack-2x"></i><div class="wd-sidebar-section-name">Account</div>
+            </a>
+        </li>
+
+        <li class="wd-sidebar-li">
+            <a class="wd-sidebar-a" href="/Kanbas/Dashboard/index.html">
+                <i class="fas fa-tachometer-alt fa-stack-2x wd-sidebar-icon-color wd-sidebar-img"></i><div class="wd-sidebar-section-name">Dashboard</div>
+            </a>
+        </li>
+
+        <li class="wd-sidebar-li wd-sidebar-li-current">
+            <a class="wd-sidebar-a wd-sidebar-a-current" href="/Kanbas/home.html">
+                <i class="fas fa-book fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Courses</div>
+            </a>
+        </li>
+
+        <li class="wd-sidebar-li">
+            <a class="wd-sidebar-a" href="#">
+                <i class="fas fa-calendar fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Calendar</div>
+            </a>
+        </li>
+
+        <li class="wd-sidebar-li">
+            <a class="wd-sidebar-a" href="#">
+                <i class="fas fa-inbox fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Inbox</div>
+            </a>
+        </li>
+
+        <li class="wd-sidebar-li">
+            <a class="wd-sidebar-a" href="#">
+                <i class="fas fa-clock fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">History</div>
+            </a>
+        </li>
+
+        <li class="wd-sidebar-li">
+            <a class="wd-sidebar-a" href="#">
+                <i class="fas fa-tv fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Studio</div>
+            </a>
+        </li>
+
+        <li class="wd-sidebar-li">
+            <a class="wd-sidebar-a" href="#">
+                <i class="fas fa-arrow-circle-right fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Commons</div>
+            </a>
+        </li>
+
+        <li class="wd-sidebar-li">
+            <a class="wd-sidebar-a" href="#">
+                <i class="fas fa-question-circle fa-stack-2x wd-sidebar-icon-color"></i><div class="wd-sidebar-section-name">Help</div>
+            </a>
+        </li>
+
+
+    </ul>
+</div>
+
+<div class="wd-breadcrumb-bar">
+    <a href="#" class="wd-breadcrumb-a"><i class="fa fa-bars fa-2x wd-bars-style"></i></a>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="wd-breadcrumb-item" href="../home.html">CS5610.17367.202410</a></li>
+            <li class="breadcrumb-item active wd-breadcrumb-active" aria-current="page">Grades</li>
+        </ol>
+    </nav>
+</div>
+<hr>
+
+<div class="wd-column wd-courses-bar col-md-2">
+    <ul class="wd-courses-ul">
+        <li class="wd-courses-li"><a class="wd-courses-a" href="/Kanbas/home.html">Home</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="/Kanbas/home.html">Modules</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Piazza</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Zoom Meetings</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="/Kanbas/Assignments/index.html">Assignments</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Quizzes</a></li>
+        <li class="wd-courses-li wd-courses-li-active"><a class="wd-courses-a wd-courses-a-active" href="/Kanbas/Grades/grades.html">Grades</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">People</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Panopto Video</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Discussions</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Announcements</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Pages</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Files</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Rubrics</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Outcomes</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Collaborations</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="#">Syllabus</a></li>
+        <li class="wd-courses-li"><a class="wd-courses-a" href="/Kanbas/Settings/index.html">Settings</a></li>
+    </ul>
+</div>
+<div class="row">
+<div class="wd-column col-md-12">
+    <div class="row float-end">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-sm btn-light btn-outline-dark wd-assignment-button float-end"><i class="fas fa-cog"></i></button>
+
+            <button type="button" id="publish-all-drop-down" class="btn btn-sm btn-light btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-file-upload"></i>&nbsp;Export
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="export-drop-down">
+                <li><a class="dropdown-item" href="#">Export</a></li>
             </ul>
-        </td>
-        <td>
-            <ul>
-                <li><a href="/Kanbas/home.html">Home</a></li>
-                <li><a href="/Kanbas/home.html">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Assignments/index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Grades/grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="/Kanbas/Settings/index.html">Settings</a></li>
-            </ul>
-        </td>
-        <td>
-            <label for="gradebook-dropdown"></label>
-            <select id="gradebook-dropdown">
-                <option value="GRADEBOOK" selected>Gradebook</option>
-            </select>
-            <button type="button">Import</button>
-            <label for="export-dropdown"></label>
-            <select id="export-dropdown">
-                <option value="EXPORT">Export</option>
-            </select>
-            <button type="button">Configure</button>
 
-            <h3>Student Names</h3>
-            <label for="text-fields-student-name"></label>
-            <input id="text-fields-student-name" placeholder="Search Students">
+            <button type="button" class="btn btn-sm btn-light btn-outline-dark wd-assignment-button float-end"><i class="fas fa-file-import"></i>&nbsp;Import</button>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6 float-start wd-grades-search-students">
+                <h5>Student Names</h5>
 
-            <h3>Assignment Names</h3>
-            <label for="text-fields-search-assignments"></label>
-            <input id="text-fields-search-assignments" placeholder="Search Assignments"> <br/>
-            <br/><button type="button">Apply Filters</button>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="search-students"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search Students" aria-label="Search-Students" aria-describedby="addon-wrapping">
+                </div>
 
-            <table border="1" valign="middle">
-                <thead>
-                    <tr>
-                        <th>Student Name</th>
-                        <th>A1 SETUP<br/>Out of 100</th>
-                        <th>A2 HTML<br/>Out of 100</th>
-                        <th>A3 CSS<br/>Out of 100</th>
-                        <th>A4 BOOTSTRAP<br/>Out of 100</th>
-                        <th>A5 JAVASCRIPT<br/>Out of 100</th>
-                        <th>A6 REACT<br/>Out of 100</th>
-                        <th>A7 REDUX<br/>Out of 100</th>
-                        <th>A8 NODE<br/>Out of 100</th>
-                        <th>A9 MONGO<br/>Out of 100</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td align="center">Luke Skywalker</td>
-                        <td align="center">98</td>
-                        <td align="center">91</td>
-                        <td align="center">94</td>
-                        <td align="center">89</td>
-                        <td align="center">94</td>
-                        <td align="center">99</td>
-                        <td align="center">100</td>
-                        <td align="center">87</td>
-                        <td align="center">92</td>
-                    </tr>
-                    <tr>
-                        <td align="center">Boba Fett</td>
-                        <td align="center">88</td>
-                        <td align="center">81</td>
-                        <td align="center">74</td>
-                        <td align="center">81</td>
-                        <td align="center">83</td>
-                        <td align="center">79</td>
-                        <td align="center">90</td>
-                        <td align="center">82</td>
-                        <td align="center">71</td>
-                    </tr>
-                    <tr>
-                        <td align="center">Han Solo</td>
-                        <td align="center">91</td>
-                        <td align="center">89</td>
-                        <td align="center">88</td>
-                        <td align="center">92</td>
-                        <td align="center">93</td>
-                        <td align="center">87</td>
-                        <td align="center">90</td>
-                        <td align="center">85</td>
-                        <td align="center">96</td>
-                    </tr>
-                    <tr>
-                        <td align="center">Leia Organa</td>
-                        <td align="center">100</td>
-                        <td align="center">99</td>
-                        <td align="center">97</td>
-                        <td align="center">99</td>
-                        <td align="center">94</td>
-                        <td align="center">91</td>
-                        <td align="center">90</td>
-                        <td align="center">89</td>
-                        <td align="center">96</td>
-                    </tr>
-                </tbody>
-            </table>
+            </div>
+            <div class="col-md-6 float-end" style="width: 49%">
+                <h5>Assignment Names</h5>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="search-assignments"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search Assignments" aria-label="Search-Assignments" aria-describedby="addon-wrapping">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        </td>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <button type="button" class="btn btn-sm btn-light btn-outline-dark wd-grades-button float-start"><i class="fas fa-filter"></i>&nbsp;Apply Filters</button>
+        </div>
+    </div>
+</div>
+
+<!--<div class="row">-->
+    <div class=" table-responsive ">
+
+        <table class="table table-bordered">
+            <thead>
+            <tr class="table-secondary">
+                <th class="wd-grades-table-studentname">Student Name</th>
+                <th class="wd-grades-table-assignmentname">A1 SETUP<br/>Out of 100</th>
+                <th class="wd-grades-table-assignmentname">A2 HTML<br/>Out of 100</th>
+                <th class="wd-grades-table-assignmentname">A3 CSS<br/>Out of 100</th>
+                <th class="wd-grades-table-assignmentname">A4 BOOTSTRAP<br/>Out of 100</th>
+                <th class="wd-grades-table-assignmentname">A5 JAVASCRIPT<br/>Out of 100</th>
+                <th class="wd-grades-table-assignmentname">A6 REACT<br/>Out of 100</th>
+                <th class="wd-grades-table-assignmentname">A7 REDUX<br/>Out of 100</th>
+                <th class="wd-grades-table-assignmentname">A8 NODE<br/>Out of 100</th>
+                <th class="wd-grades-table-assignmentname">A9 MONGO<br/>Out of 100</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="wd-grades-table-studentname">Luke Skywalker</td>
+                <td align="center">98%</td>
+                <td align="center">91%</td>
+                <td align="center">94%</td>
+                <td align="center">89%</td>
+                <td align="center">94%</td>
+                <td align="center">99%</td>
+                <td align="center">100%</td>
+                <td align="center">87%</td>
+                <td align="center">92%</td>
+            </tr>
+            <tr class="table-secondary">
+                <td class="wd-grades-table-studentname">Boba Fett</td>
+                <td align="center">88%</td>
+                <td align="center">81%</td>
+                <td align="center">74%</td>
+                <td align="center">81%</td>
+                <td align="center">83%</td>
+                <td align="center">79%</td>
+                <td align="center">90%</td>
+                <td align="center">82%</td>
+                <td align="center">71%</td>
+            </tr>
+            <tr>
+                <td class="wd-grades-table-studentname">Han Solo</td>
+                <td align="center">91%</td>
+                <td align="center">89%</td>
+                <td align="center">88%</td>
+                <td align="center">92%</td>
+                <td align="center">93%</td>
+                <td align="center">87%</td>
+                <td align="center">90%</td>
+                <td align="center">85%</td>
+                <td align="center">96%</td>
+            </tr>
+            <tr class="table-secondary">
+                <td class="wd-grades-table-studentname">Leia Organa</td>
+                <td align="center">100%</td>
+                <td align="center">99%</td>
+                <td align="center">97%</td>
+                <td align="center">99%</td>
+                <td align="center">94%</td>
+                <td align="center">91%</td>
+                <td align="center">90%</td>
+                <td align="center">89%</td>
+                <td align="center">96%</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+<!--
+</div>
+-->
 
 
-    </tr>
 
-    </tbody>
-</table>
 
 </body>
 </html>

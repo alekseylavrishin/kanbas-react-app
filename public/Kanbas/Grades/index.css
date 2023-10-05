@@ -284,3 +284,27 @@ body, html {
     width: 100%;
     margin-right: 5px;
 }
+/*----------------------------*/
+/*----------Grades-----------*/
+.wd-grades-search-students {
+    margin-right: 10px;
+    width: 49%;
+}
+.wd-grades-padding {
+    padding-left: 12px;
+}
+.wd-grades-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wd-grades-td {
+    align-content: center;
+}
+.wd-grades-table-studentname {
+    text-align: start;
+    font-size: 14px;
+}
+.wd-grades-table-assignmentname {
+    text-align: center;
+    font-size: 14px;
+}
