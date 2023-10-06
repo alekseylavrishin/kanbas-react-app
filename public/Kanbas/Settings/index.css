@@ -1,0 +1,330 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.wd-column {
+    min-height: 100%;
+    float: left;
+    padding-top: 20px;
+    /*
+    display: inline-block;
+    */
+    white-space: nowrap;
+
+
+}
+/*----------Sidebar----------*/
+.wd-nav-div {
+    width: 85px;
+    align-content: center;
+    background-color: #1c1c1c;
+    text-align: center;
+    margin-right: 20px;
+    position: fixed;
+}
+.wd-nav-box{
+    height: 100px;
+    padding: 5px;
+    text-align: center;
+}
+.wd-sidebar-ul{
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+}
+.wd-sidebar-li{
+    height: 65px;
+    vertical-align: center;
+    text-align: center;
+    width: 75px;
+    padding: 5px;
+
+}
+.wd-sidebar-li-current{
+    background-color: white;
+
+    /*padding-right: 5px;*/
+}
+.wd-sidebar-a{
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+}
+.wd-sidebar-a:hover{
+    color: white;
+}
+.wd-sidebar-a-current{
+    color: #bf0f0f;
+}
+.wd-sidebar-section-name {
+    padding-top: 28px;
+}
+.wd-sidebar-icon-color{
+    color: #bf0f0f;
+}
+.wd-sidebar-img {
+    padding-right: 5px;
+    padding-top: 3px;
+}
+
+/*----------------------------*/
+/*--------Course Navigation----------*/
+.wd-courses-bar {
+    height: 100%;
+    align-content: start;
+    /*width: 190px;*/
+    padding-top: 20px;
+    margin-right: 10px;
+    margin-left: 90px;
+
+}
+.wd-courses-ul{
+    list-style: none;
+    text-align: left;
+    padding-left: 1rem;
+    margin-right: 2rem;
+
+}
+.wd-courses-li {
+    padding: 5px 5px 10px;
+}
+.wd-courses-li-active {
+    border-left: 2px solid #1c1c1c;
+    list-style-position: outside;
+    color: #1c1c1c;
+
+
+}
+.wd-courses-a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #bf0f0f;
+}
+.wd-courses-a-active {
+    color: #1c1c1c;
+}
+.wd-courses-a:hover {
+    text-decoration: underline;
+    color: #bf0f0f;
+}
+.wd-courses-a-active:hover{
+    color: #1c1c1c;
+}
+/*----------------------------*/
+/*----------Modules-----------*/
+.wd-modules-column {
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 600px;
+    width: 550px;
+}
+.wd-modules-font {
+    font-size: 16px;
+    font-weight: 600;
+    color: #303030;
+}
+.wd-modules-a {
+    text-decoration: none;
+    color: #bf0f0f;
+}
+.wd-modules-a:hover {
+    text-decoration: underline;
+    color: #bf0f0f;
+}
+.wd-modules-module-btn {
+    color: white;
+}
+.wd-modules-c-e{
+    margin: 5px;
+}
+/*----------------------------*/
+/*----------Course Status-----------*/
+.wd-status-a {
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+.wd-status-column {
+    width: 20%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.wd-status-h5 {
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-top: 15px;
+}
+.wd-status-view-calendar {
+    float: right;
+    text-decoration: none;
+    color: #bf0f0f;
+    margin-top: 15px;
+
+}
+.wd-status-view-calendar:hover{
+    color: #bf0f0f;
+    text-decoration: underline;
+}
+.wd-status-ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 5px;
+}
+.wd-status-li {
+    text-align: left;
+}
+.wd-status-a {
+    text-decoration: none;
+}
+.wd-status-a:hover {
+    text-decoration: underline;
+    color: #bf0f0f;
+}
+.wd-status-p {
+    margin-left: 19px;
+    font-size: 14px;
+    color: grey;
+    font-weight: 600;
+}
+.wd-status-a2 {
+    color: #bf0f0f;
+    text-decoration: none;
+}
+.wd-status-a2:hover {
+    color: #bf0f0f;
+    text-decoration: underline;
+}
+/*----------------------------*/
+/*----------Breadcrumb-----------*/
+.wd-breadcrumb-bar {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    margin-left: 85px;
+}
+.wd-breadcrumb-a{
+    color: #bf0f0f;
+    text-decoration: none;
+}
+.wd-breadcrumb-a:hover{
+    color: #bf0f0f;
+    text-decoration: none;
+}
+.wd-breadcrumb-item {
+    color: #b52828;
+    text-decoration: none;
+}
+.wd-breadcrumb-item:hover {
+    color: #b52828;
+    text-decoration: underline;
+}
+.wd-breadcrumb-active {
+    color: #1c1c1c;
+}
+.wd-bars-style {
+    float: left;
+    margin-right: 20px;
+}
+
+/*----------------------------*/
+/*----------Assignment-----------*/
+.wd-assignment-header {
+
+}
+.wd-assignment-button {
+    margin-left: 5px;
+}
+.wd-assignment-li {
+    height: 65px;
+
+}
+.wd-assignment-li-center-v{
+    padding: 10px;
+    z-index: 1;
+}
+.wd-assignment-li-main {
+    padding-left: 5px;
+}
+.wd-assignment-span {
+    font-size: 12px;
+}
+.wd-assignment-a {
+    color: black;
+    text-decoration: none;
+}
+.wd-assignment-a:hover {
+    color: black;
+    text-decoration: underline;
+}
+.wd-edit-assignment-span {
+    margin-right: 10px;
+    font-weight: 600;
+}
+.wd-edit-assignment-div {
+    /*
+    height: 68px;
+    */
+}
+.wd-edit-border {
+    outline: 1px solid #ced4da;
+    padding: 15px;
+
+}
+.wd-edit-checkbox {
+    margin-bottom: 10px;
+}
+.wd-edit-label-title{
+    margin-right: 10px;
+}
+.wd-edit-add-button {
+    display: block;
+    width: 100%;
+    margin-right: 5px;
+}
+/*----------------------------*/
+/*----------Grades-----------*/
+.wd-grades-search-students {
+    margin-right: 10px;
+    width: 49%;
+}
+.wd-grades-padding {
+    padding-left: 12px;
+}
+.wd-grades-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wd-grades-td {
+    align-content: center;
+}
+.wd-grades-table-studentname {
+    text-align: start;
+    font-size: 14px;
+}
+.wd-grades-table-assignmentname {
+    text-align: center;
+    font-size: 14px;
+}
+/*----------------------------*/
+/*----------Settings-----------*/
+.wd-settings-img-div {
+    height: 140px;
+    width: 230px;
+    margin: 10px 10px 5px;
+    display: block;
+    outline: 1px solid #ced4da;
+    padding: 15px;
+    padding-top: 52px;
+    padding-bottom: 52px;
+}
+.wd-settings-text {
+    color: #b52828;
+    text-decoration: none;
+}
+.wd-settings-text:hover {
+    color: #b52828;
+    text-decoration: underline;
+}
