@@ -14,7 +14,8 @@ function CourseNavigation() {
     console.log(pathname);
 
     return (
-        <div className={"row"}>
+        //<div className={"row"}>
+        <div>
             <div className={"wd-breadcrumb-bar"}>
             <div style={{width: 20, display: "inline-block"}}><a href="#" className="wd-breadcrumb-a"><FaBars/></a></div>
             <div style={{ display: "inline-block"}}>

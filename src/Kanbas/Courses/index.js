@@ -8,13 +8,13 @@ function Courses() {
     const { courseId } = useParams();
     const course = db.courses.find((course) => course._id === courseId);
     return (
-        <div className={"bottom-0 end-0"}>
+        <div>
             {/*<h1>Course {course.name}</h1>*/}
 
             <CourseNavigation />
             <div>
                 <div
-                    className="overflow-y-scroll position-fixed bottom-0 end-0"
+                    className="float-start col-xl-9 col-lg-8 col-md-7 col-sm-6"
                     style={{
                         left: "320px",
                         top: "50px",

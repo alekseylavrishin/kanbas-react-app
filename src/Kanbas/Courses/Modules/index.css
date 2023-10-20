@@ -6,7 +6,7 @@ body, html {
 .wd-column {
     min-height: 100%;
     float: left;
-    padding-top: 20px;
+    padding-top: 10px;
     /*
     display: inline-block;
     */
@@ -20,10 +20,11 @@ body, html {
     margin-right: 10px;
     /*max-width: 600px;
     width: 550px;*/
-    width: 95%
+    width: 100%;
+
 }
 .wd-modules-font {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #303030;
 }

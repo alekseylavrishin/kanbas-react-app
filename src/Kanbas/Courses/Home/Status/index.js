@@ -1,9 +1,17 @@
-import {FaFileImport, FaArrowAltCircleRight, FaBullseye, FaChartBar, FaBullhorn, FaBell} from "react-icons/fa";
+import {
+    FaFileImport,
+    FaArrowAltCircleRight,
+    FaBullseye,
+    FaChartBar,
+    FaBullhorn,
+    FaBell,
+    FaCalendar
+} from "react-icons/fa";
 import "./index.css";
 
 function Status() {
     return(
-        <div className="wd-column wd-status-column d-none d-lg-block">
+        <div className="wd-column wd-status-column d-none d-lg-block col-3 text-wrap">
 
                 <h5>Course Status</h5>
                 <button type="button" className="btn btn-light btn-outline-dark"><i
@@ -13,43 +21,41 @@ function Status() {
 
                 <div className="list-group">
                     <a href="#" className="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
-                        <i className="fas fa-file-import"></i>
+                        <FaFileImport/>
                         Import Existing Content</a>
                     <a href="#" className="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
-                        <i className="fas fa-arrow-alt-circle-right"></i>
+                        <FaArrowAltCircleRight/>
                         Import From Commons</a>
                     <a href="#" className="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
-                        <i className="fas fa-bullseye"></i>
+                        <FaBullseye/>
                         Choose Home Page</a>
                     <a href="#" className="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
-                        <i className="fas fa-chart-bar"></i>
+                        <FaChartBar/>
                         View Course Stream</a>
                     <a href="#" className="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
-                        <i className="fas fa-bullhorn"></i>
+                        <FaBullhorn/>
                         New Announcement</a>
                     <a href="#" className="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
-                        <i className="fas fa-chart-bar"></i>
+                        <FaChartBar/>
                         New Analytics</a>
                     <a href="#" className="wd-status-a list-group-item list-group-item-action list-group-item-secondary">
-                        <i className="fas fa-bell"></i>
+                        <FaBell/>
                         View Course Notifications</a>
                 </div>
 
                 <div>
                     <h5 className="wd-status-h5">Coming Up</h5>
-                    <a className="wd-status-view-calendar" href="#">
-                        <i className="fas fa-calendar"></i>
-                        View Calendar</a>
-                    <hr/>
+                    <a className="wd-status-view-calendar" href="#"><FaCalendar/>View Calendar</a>
+                    <br/><hr/>
                         <ul className="wd-status-ul">
-                            <li className="wd-status-li"><a href="#" className="wd-status-a2"><i
-                                className="fas fa-calendar"></i>&nbsp;Lecture</a>
+                            <li className="wd-status-li"><a href="#" className="wd-status-a2">
+                                <FaCalendar/>Lecture</a>
                                 <p className="wd-status-p">CS4550.12631.202410 Sep 7 at 11:45am</p></li>
-                            <li className="wd-status-li"><a href="#" className="wd-status-a2"><i
-                                className="fas fa-calendar"></i>&nbsp;Lecture</a>
+                            <li className="wd-status-li"><a href="#" className="wd-status-a2">
+                                <FaCalendar/>Lecture</a>
                                 <p className="wd-status-p">CS4550.12631.202410 Sep 11 at 11:45am</p></li>
-                            <li className="wd-status-li"><a href="#" className="wd-status-a2"><i
-                                className="fas fa-calendar"></i>&nbsp;CS5610 06 FA23 Lecture</a>
+                            <li className="wd-status-li"><a href="#" className="wd-status-a2">
+                                <FaCalendar/>&nbsp;CS5610 06 FA23 Lecture</a>
                                 <p className="wd-status-p">Sep 11 at 7pm</p></li>
                         </ul>
                 </div>

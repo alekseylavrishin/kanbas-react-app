@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import db from "../../Database";
 import "./index.css";
 import {FaPlus, FaEllipsisV} from "react-icons/fa";
@@ -7,12 +7,13 @@ import {FaPlus, FaEllipsisV} from "react-icons/fa";
 function ModuleList() {
     const { courseId } = useParams();
     const modules = db.modules;
+    const { pathname } = useLocation();
     console.log(courseId)
     return (
 
-        <div className="wd-column wd-modules-column">
 
-                <br/>
+        <div className={`wd-column wd-modules-column  col-sm-8 ${pathname.includes("Modules") ? 'col-xl-12 col-lg-10 col-md-12 ' : 'col-xl-8 col-md-8 col-lg-9'}`}>
+
                 <button type="button" className="btn btn-light btn-outline-dark wd-modules-btn-margin">Collapse All</button>
                 <button type="button" className="btn btn-light btn-outline-dark wd-modules-btn-margin">View Progress</button>
 
@@ -36,18 +37,16 @@ function ModuleList() {
 
 
 
-        <ul className="list-group">
+        <ul className="list-group text-wrap" >
             {
                 modules.filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <li key={index} className="list-group-item bg-secondary bg-opacity-25 wd-modules-font">
-                            <h4>{module.name}</h4>
-                            <p>{module.description}</p>
-
+                            <h4 className={"wd-modules-font"}>{module.name}</h4>
                             {
                                 module.modulesList.map((moduleLi, moduleIndex) => (
                                     <li className={"list-group-item wd-modules-font"}>
-                                        <h5>{moduleLi.title}</h5>
+                                        <h6 className={"wd-modules-font"}>{moduleLi.title}</h6>
                                     </li>
                                         ))
                             }
