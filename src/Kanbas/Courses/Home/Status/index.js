@@ -11,7 +11,7 @@ import "./index.css";
 
 function Status() {
     return(
-        <div className="wd-column wd-status-column d-none d-lg-block col-3 text-wrap">
+        <div className="wd-column wd-status-column d-none d-lg-block col-lg-3 col-md-2 text-wrap float-end">
 
                 <h5>Course Status</h5>
                 <button type="button" className="btn btn-light btn-outline-dark"><i

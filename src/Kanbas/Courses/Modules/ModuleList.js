@@ -12,7 +12,7 @@ function ModuleList() {
     return (
 
 
-        <div className={`wd-column wd-modules-column  col-sm-8 ${pathname.includes("Modules") ? 'col-xl-12 col-lg-10 col-md-12 ' : 'col-xl-8 col-md-8 col-lg-9'}`}>
+        <div className={`wd-column wd-modules-column  col-sm-8 ${pathname.includes("Modules") ? 'col-xl-12 col-lg-10 col-md-10 ' : 'col-xl-8 col-md-7 col-lg-7 col-sm-6'}`}>
 
                 <button type="button" className="btn btn-light btn-outline-dark wd-modules-btn-margin">Collapse All</button>
                 <button type="button" className="btn btn-light btn-outline-dark wd-modules-btn-margin">View Progress</button>
