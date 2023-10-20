@@ -28,7 +28,7 @@ function ModuleList() {
                         <li><a className="dropdown-item" href="#">Unpublish All</a></li>
                     </ul>
                 </div>
-                <button type="button" className="btn wd-modules-module-btn btn-danger btn-outline-dark wd-modules-btn-margin"><FaPlus/>&nbsp;Module
+                <button type="button" className="btn wd-modules-module-btn btn-danger btn-outline-dark wd-modules-btn-margin" style={{color: "white"}}><FaPlus/>&nbsp;Module
                 </button>
                 <button type="button" className="btn btn-light btn-outline-dark wd-modules-btn-margin"><FaEllipsisV/>
                 </button>
