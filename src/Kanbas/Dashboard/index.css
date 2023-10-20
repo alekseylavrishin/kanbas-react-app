@@ -1,8 +1,9 @@
 /*NEW*/
 .wd-dashboard-column {
-    width: 100%;
+    width: 90%;
     height: 100%;
     margin-left: 110px;
+    overflow: hidden;
 }
 .wd-dashboard-h1 {
     color: grey;
