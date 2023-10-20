@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.wd-column {
+    min-height: 100%;
+    float: left;
+    padding-top: 20px;
+    /*
+    display: inline-block;
+    */
+    white-space: nowrap;
+
+
+}
+
+.wd-modules-column {
+    margin-left: 10px;
+    margin-right: 10px;
+    /*max-width: 600px;
+    width: 550px;*/
+    width: 95%
+}
+.wd-modules-font {
+    font-size: 16px;
+    font-weight: 600;
+    color: #303030;
+}
+.wd-modules-a {
+    text-decoration: none;
+    color: #bf0f0f;
+}
+.wd-modules-a:hover {
+    text-decoration: underline;
+    color: #bf0f0f;
+}
+.wd-modules-module-btn {
+    color: white;
+}
+.wd-modules-btn-margin {
+    margin: 5px;
+}
+.wd-modules-c-e{
+    margin: 5px;
+}
