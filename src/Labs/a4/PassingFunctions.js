@@ -1,9 +1,9 @@
-function PassingFunctions({func}) {
+function PassingFunctions({ theFunction }) {
     return (
         <div>
             <h2>Passing Functions</h2>
-            <button className={"btn btn-primary"}
-                    onClick={func}>
+            <button className="btn btn-primary"
+                    onClick={theFunction}>
                 Invoke the Function
             </button>
         </div>

@@ -24,7 +24,7 @@ function Assignment4 (){
             <Add a={1} b={2}/>
             <ClickEvent/>
             <PassingDataOnEvent/>
-            <PassingFunctions func={sayHello()}/>
+            <PassingFunctions theFunction={sayHello()}/>
             <EventObject/>
             <Counter/>
             <BooleanStateVariables/>
