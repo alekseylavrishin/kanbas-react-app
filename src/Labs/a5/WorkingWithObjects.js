@@ -13,12 +13,6 @@ function WorkingWithObjects() {
         score: 0
     });
 
-    const [checked, setChecked] = React.useState(false);
-    function handleChange(e) {
-        //setChecked(e.target.checked);
-        setAssignment(...assignment, checked, e.target.value)
-    }
-
     const URL = "http://localhost:4000/a5/assignment"
 
     return(
@@ -37,17 +31,31 @@ function WorkingWithObjects() {
                 type={"number"}
             />
 
-            <h3>Modifying Properties: Completed</h3>
-            <a
-                href={`${URL}/assignment/${assignment.completed}`}
-                className={"btn btn-primary"}>
+
+            <h4>Modifying Properties: Completed</h4>
+            <div className={"form-check"}>
+                <input onChange={(e) => setAssignment({
+                    ...assignment, completed: e.target.value})}
+                       className={"form-check-input"} name={"3.2.4"} type={"radio"}
+                       value={"true"} id={"3.2.4-true"}/>
+                <label className={"form-check-label"} htmlFor={"3.2.4-true"}>
+                    True
+                </label>
+            </div>
+            <div className={"form-check"}>
+                <input onChange={(e) => setAssignment({
+                    ...assignment, completed: e.target.value})}
+                       className={"form-check-input"} name={"3.2.4"} type={"radio"} value={"false"} id={"3.2.4-false"}/>
+                <label className={"form-check-label"} htmlFor={"3.2.4-false"}>
+                    False
+                </label>
+            </div>
+
+            <a href={`${URL}/completed/${assignment.completed}`}
+               className={"btn btn-primary me-2"}>
                 Update Completed
             </a>
-            <input
-                value={"true"}
-                type={"checkbox"}
-                onChange={(e) => setAssignment(({...assignment, checked: e.target.value}))}
-            />
+
 
 
             <h3>Working With Objects</h3>
