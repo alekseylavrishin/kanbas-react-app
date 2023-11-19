@@ -1,7 +1,5 @@
-import React, {useState} from "react";
-import {scryRenderedComponentsWithType} from "react-dom/test-utils";
-import {type} from "@testing-library/user-event/dist/type";
-import {json} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 
 function WorkingWithObjects() {
     const [assignment, setAssignment] = useState({
@@ -13,7 +11,20 @@ function WorkingWithObjects() {
         score: 0
     });
 
-    const URL = "http://localhost:4000/a5/assignment"
+    const URL = "http://localhost:4000/a5/assignment";
+
+    const fetchAssignment = async () => {
+        const response = await axios.get(`${URL}`);
+        setAssignment(response.data);
+    };
+
+    const updateTitle = async () => {
+        const response = await axios.get(`${URL}/title/${assignment.title}`);
+        setAssignment(response.data);
+    };
+    useEffect(() => {
+        fetchAssignment();
+    }, [])
 
     return(
         <div>
@@ -84,6 +95,14 @@ function WorkingWithObjects() {
                 className={"form-control mb-2 w-75"}
                 type={"text"}
             />
+            <button onClick={updateTitle}
+                    className={"w-100 btn btn-primary mb-2"}>
+                Update Title to {assignment.title}
+            </button>
+            <button onClick={fetchAssignment}
+                    className={"w-100 btn btn-danger mb-2"}>
+                Fetch Assignment
+            </button>
 
         </div>
     );
