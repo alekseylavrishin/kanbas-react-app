@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 
 function WorkingWithArrays() {
+    const [errorMessage, setErrorMessage] = useState(null);
     const API = "http://localhost:4000/a5/todos";
     const [todo, setTodo] = useState({
         id: 1,
@@ -12,10 +13,39 @@ function WorkingWithArrays() {
     });
 
     const [todos, setTodos] = useState([]);
+
+    const updateTodo = async () => {
+        try {
+            const response = await axios.put(`${API}/${todo.id}`, todo);
+            setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+            setTodo({});
+        }
+        catch (error) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
+    }
+
+    const postTodo = async () => {
+        const response = await axios.post(API, todo);
+        setTodos([...todos, response.data]);
+    }
+
     const fetchTodos = async () => {
         const response = await axios.get(API);
         setTodos(response.data);
     };
+
+    const deleteTodo = async (todo) => {
+        try {
+            const response = await axios.delete(`${API}/${todo.id}`);
+            setTodos(todos.filter((t) => t.id !== todo.id));
+        }
+        catch (error) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
+    }
 
     const removeTodo = async (todo) => {
         const response = await axios.get(`${API}/${todo.id}/delete`);
@@ -46,23 +76,60 @@ function WorkingWithArrays() {
         <div>
             <h3>Working with Arrays</h3>
             <h4>Retrieving Arrays</h4>
-            <button onClick={createTodo}
-                    className={"btn btn-primary mb-2 w-100"}>
-                Create Todo
-            </button>
+
             <input value={todo.id}
                    onChange={(e) => setTodo({...todo, id: e.target.value})}
                    className={"form-control"}
-                   disabled={true}
             />
             <input value={todo.title}
                    onChange={(e) => setTodo({...todo, title: e.target.value})}
                    className={"form-control"}
             />
+
+            <textarea
+                className={"form-control"}
+                onChange={(e) => setTodo({...todo, description: e.target.value})}
+                value={todo.description} />
+            <input
+                className={"form-control"}
+                onChange={(e) => setTodo({
+                    ...todo, due: e.target.value
+                    })}
+                value={todo.due} type={"date"}
+            />
+            <br/>
+            <label>
+                <input
+                    onChange={(e) => setTodo({
+                        ...todo, completed: e.target.checked })}
+                    value={todo.completed} type="checkbox"
+                />
+                Completed
+            </label>
+
+            {errorMessage && (
+                <div className={"alert alert-danger mb-2 mt-2"}>
+                    {errorMessage}
+                </div>
+            )}
+
+            <button className={"btn btn-warning mb-2 w-100"} onClick={postTodo} >
+                Post Todo
+            </button>
+            <button className={"btn btn-info mb-2 w-100"} onClick={updateTodo}>
+                Update Todo
+            </button>
+            <button onClick={createTodo}
+                    className={"btn btn-primary mb-2 w-100"}>
+                Create Todo
+            </button>
+
             <button onClick={updateTitle}
                     className={"btn btn-success mb-2 w-100"}>
                 Update Title
             </button>
+
+
             <ul className={"list-group"}>
                 {todos.map((todo) => (
                     <li key={todo.id}
@@ -73,11 +140,22 @@ function WorkingWithArrays() {
                             Edit
                         </button>
                         <button
+                            onClick={() => deleteTodo(todo)}
+                            className={"btn btn-danger float-end ms-2 me-2"}>
+                            Delete
+                        </button>
+                        <button
                             onClick={() => removeTodo(todo)}
                             className={"btn btn-danger float-end"}>
                             Remove
                         </button>
+                        <input
+                            checked={todo.completed}
+                            type="checkbox" readOnly
+                        />
                         {todo.title}
+                        <p>{todo.description}</p>
+                        <p>{todo.due}</p>
                     </li>
                 ))}
             </ul>
