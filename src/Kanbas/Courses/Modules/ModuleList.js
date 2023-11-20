@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {useLocation, useParams} from "react-router-dom";
-import db from "../../Database";
 import "./index.css";
 import {FaPlus, FaEllipsisV} from "react-icons/fa";
 
@@ -10,16 +9,38 @@ import {
     deleteModule,
     updateModule,
     setModule,
+    setModules
 } from "./moduleReducer";
-
+import * as client from "./client";
+import { findModulesForCourse, createModule } from "./client";
 
 function ModuleList() {
     const { courseId } = useParams();
     const { pathname } = useLocation();
+    useEffect(() => {
+        findModulesForCourse(courseId).then((modules) => dispatch(setModules(modules)));
+    }, [courseId]);
 
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
+
+    const handleAddModule = () => {
+        createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
+
+    const handleDeleteModule = (moduleId) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    };
 
     /*const addSubModule = (subModule) => {
         setModule((prevModule) => {
@@ -35,7 +56,7 @@ function ModuleList() {
     console.log(courseId)
     console.log(module.modulesList[0].title)
     return (
-        <div className={`wd-column wd-modules-column  col-sm-8 ${pathname.includes("Modules") ? 'col-xl-12 col-lg-10 col-md-10 ' : 'col-xl-8 col-md-7 col-lg-7 col-sm-6'}`}>
+        <div className={`wd-column wd-modules-column  col-sm-8 ${pathname.includes("Modules") ? 'col-xl-12 col-lg-10 col-md-10 ' : 'col-xl-8 col-md-7 col-lg-7 col-sm-7'}`}>
 
                 <button type="button" className="btn btn-light btn-outline-dark wd-modules-btn-margin">Collapse All</button>
                 <button type="button" className="btn btn-light btn-outline-dark wd-modules-btn-margin">View Progress</button>
@@ -65,12 +86,15 @@ function ModuleList() {
 
                 <li className="list-group-item">
                     <button className={"btn btn-success float-end"}
-                            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                            //onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                        onClick={handleAddModule}>
                         Add
                     </button>
 
                     <button className={"btn btn-primary float-end me-1 ms-1"}
-                            onClick={() => dispatch(updateModule(module))}>
+                            //onClick={() => dispatch(updateModule(module))}>
+                        onClick={handleUpdateModule}
+                        >
                         Update
                     </button>
 
@@ -140,7 +164,8 @@ function ModuleList() {
                         <li key={index} className="list-group-item bg-secondary bg-opacity-25 wd-modules-font">
                             <h4 className={"wd-modules-font"}>{module.name}</h4>
                             <button className={"btn btn-sm btn-danger float-end mb-3"}
-                                    onClick={() => dispatch(deleteModule(module._id))}>
+                                    //onClick={() => dispatch(deleteModule(module._id))}>
+                                onClick={() => handleDeleteModule(module._id)}>
                                 Delete
                             </button>
                             <button className={"btn btn-sm btn-success mb-2"}

@@ -1,20 +1,29 @@
-import db from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
-function Courses( {courses} ) {
+function Courses() {
     const { courseId } = useParams();
-    /*const course = db.courses.find((course) => course._id === courseId);*/
-    const course = courses.find((course) => course._id === courseId)
+    const URL = "http://localhost:4000/api/courses";
+    const [course, setCourse] = useState({});
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    }
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+    
     return (
         <div>
-            {/*<h1>Course {course.name}</h1>*/}
-
             <CourseNavigation />
             <div>
                 <div
