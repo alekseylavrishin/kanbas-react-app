@@ -74,7 +74,7 @@ function WorkingWithObjects() {
             <h3>Working With Objects</h3>
             <h4>Retrieving Objects</h4>
             {/*<a href={"http://localhost:4000/a5/assignment"}*/}
-            <a href={`${URL}`}>
+            <a href={`${URL}`}
                className={"btn btn-primary me-2"}>
                 Get Assignment
             </a>
