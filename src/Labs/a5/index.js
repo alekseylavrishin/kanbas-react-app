@@ -11,7 +11,7 @@ function Assignment5() {
             <h1>Assignment 5</h1>
             <div className={"list-group"}>
                 {/*<a href={"http://localhost:4000/a5/welcome"}*/}
-                <a href={API}>
+                <a href={API}
                    className={"list-group-item"}>
                     Welcome
                 </a>
