@@ -6,21 +6,27 @@ function EncodingParametersInURLS() {
     const [b, setB] = useState(23);
     const [result, setResult] = useState(0);
 
+    const API_BASE = process.env.REACT_APP_LAB_BASE;
+    const API = `${API_BASE}`;
+
     const fetchSum = async (a, b) => {
         const response = await
-            axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+            //axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+            axios.get(`${API}/add/${a}/${b}`);
         setResult(response.data);
     };
 
     const fetchSubtraction = async (a, b) => {
         const response = await axios.get(
-            `http://localhost:4000/a5/subtract/${a}/${b}`);
+            //`http://localhost:4000/a5/subtract/${a}/${b}`);
+            `${API}/subtract/${a}/${b}`);
         setResult(response.data);
     };
 
     const [welcome, setWelcome] = useState("");
     const fetchWelcome = async () => {
-        const response = await axios.get(("http://localhost:4000/a5/welcome"));
+        //const response = await axios.get(("http://localhost:4000/a5/welcome"));
+        const response = await axios.get((`${API}/welcome`));
         setWelcome(response.data);
     };
     useEffect(() => {
@@ -55,24 +61,28 @@ function EncodingParametersInURLS() {
 
             <h3>Path Parameters</h3>
             <a
-                href={`http://localhost:4000/a5/add/${a}/${b}`}
+                //href={`http://localhost:4000/a5/add/${a}/${b}`}
+                href={`${API}/add/${a}/${b}`}
                 className={"btn btn-primary"}>
                 Add {a} + {b}
             </a>
             <a
-                href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+                //href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+                href={`${API}/subtract/${a}/${b}`}
                 className={"btn btn-danger"}>
                 Subtract {a} - {b}
             </a>
 
             <h3>Query Parameters</h3>
             <a
-                href={`http://localhost:4000/a5/calculator?operation=add&a=${a}&b=${b}`}
+                //href={`http://localhost:4000/a5/calculator?operation=add&a=${a}&b=${b}`}
+                href={`${API}}/calculator?operation=add&a=${a}&b=${b}`}
                 className={"btn btn-primary"}>
                 Add {a} + {b}
             </a>
             <a
-                href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}
+                //href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}
+                href={`${API}/calculator?operation=subtract&a=${a}&b=${b}`}
                 className={"btn btn-danger"}>
                 Subtract {a} - {b}
             </a>
