@@ -17,7 +17,7 @@
     "due": "Sep 14 at 11:59pm"},
   { "_id": "A302", "title": "Algorithms Quiz 1", "course": "46821", "totalPoints": 40,
     "due": "Sep 20 at 11:59pm"},
-  { "_id": "A302", "title": "Algorithms Quiz 2", "course": "46821", "totalPoints": 35,
+  { "_id": "A303", "title": "Algorithms Quiz 2", "course": "46821", "totalPoints": 35,
     "due": "Oct 11 at 11:59pm"},
 
   { "_id": "A401", "title": "WD Assignment 1", "course": "52367", "totalPoints": 100,

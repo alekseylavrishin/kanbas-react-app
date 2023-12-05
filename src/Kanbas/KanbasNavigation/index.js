@@ -30,7 +30,7 @@ function getImage(link) {
 }
 
 function KanbasNavigation() {
-    const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help"];
+    const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help", "Signin", "Signup"];
 
     const {pathname} = useLocation();
     return(
